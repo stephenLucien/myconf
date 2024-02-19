@@ -1,0 +1,21 @@
+name: Run bash script kitsunebi/genRules.sh at 4 AM
+on:
+  schedule:
+    # Runs every day at 4 AM
+    - cron: '0 4 * * *'
+
+jobs:
+  run-script-kitsunebi-genrule:
+    runs-on: ubuntu-latest
+    steps:
+      - name: kitsunebi-genrule
+      - uses: actions/checkout@v2 # Checks out your repository
+      - run: |
+        cd kitsunebi
+        ./genRules.sh update
+        test $? && echo "exit with $?" && exit $?
+        ./genRules.sh kitsunebi
+        test -z $(git diff kitsunebi_blacklist.conf) && echo "No Update" && exit 0
+        git add kitsunebi_blacklist.conf
+        git commit -m "[$(LANG=C date)] auto update" || exit 0
+        git push origin master
