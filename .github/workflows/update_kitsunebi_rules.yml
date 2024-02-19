@@ -19,5 +19,7 @@ jobs:
           ./genRules.sh kitsunebi
           test -z $(git diff kitsunebi_blacklist.conf) && echo "No Update" && exit 0
           git add kitsunebi_blacklist.conf
-          git commit -m "[$(LANG=C date)] auto update" || exit 0
+          git add gfwlist.txt
+          git add gfwlist_dec.txt
+          git commit -m "Github Action: update kitsunebi rules at [$(LANG=C date)]" || exit 0
           git push origin master

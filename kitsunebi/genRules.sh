@@ -114,6 +114,7 @@ do_work_kitsunebi() {
 223.5.5.5
 119.29.29.29
 8.8.8.8,53,REMOTE
+8.8.4.4,53,REMOTE
 EOF
 
 }
