@@ -1,5 +1,6 @@
 name: Run bash script kitsunebi/genRules.sh at 4 AM
 on:
+  workflow_dispatch:
   schedule:
     # Runs every day at 4 AM
     - cron: '0 4 * * *'
