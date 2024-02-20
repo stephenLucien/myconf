@@ -129,37 +129,32 @@ IP-CIDR,149.154.167.0/22,Proxy,no-resolve
 IP-CIDR,149.154.175.0/22,Proxy,no-resolve
 IP-CIDR,91.108.56.0/22,Proxy,no-resolve
 
-GEOIP,cn,DIRECT
-DOMAIN-KEYWORD,geosite:cn,DIRECT
+USER-AGENT,twitter,PROXY,force-remote-dns
+DOMAIN-KEYWORD,twitter,PROXY,force-remote-dns
 
-USER-AGENT,wechat,DIRECT
+USER-AGENT,gmail,PROXY,force-remote-dns
+DOMAIN-KEYWORD,gmail,PROXY,force-remote-dns
 
-USER-AGENT,twitter,PROXY
-DOMAIN-KEYWORD,twitter,PROXY
+USER-AGENT,telegram,PROXY,force-remote-dns
+DOMAIN-KEYWORD,telegram,PROXY,force-remote-dns
 
-USER-AGENT,gmail,PROXY
-DOMAIN-KEYWORD,gmail,PROXY
+USER-AGENT,tumblr,PROXY,force-remote-dns
+DOMAIN-KEYWORD,tumblr,PROXY,force-remote-dns
 
-USER-AGENT,telegram,PROXY
-DOMAIN-KEYWORD,telegram,PROXY
+USER-AGENT,facebook,PROXY,force-remote-dns
+DOMAIN-KEYWORD,facebook,PROXY,force-remote-dns
 
-USER-AGENT,tumblr,PROXY
-DOMAIN-KEYWORD,tumblr,PROXY
+USER-AGENT,pinterest,PROXY,force-remote-dns
+DOMAIN-KEYWORD,pinterest,PROXY,force-remote-dns
 
-USER-AGENT,facebook,PROXY
-DOMAIN-KEYWORD,facebook,PROXY
-
-USER-AGENT,pinterest,PROXY
-DOMAIN-KEYWORD,pinterest,PROXY
-
-USER-AGENT,instagram,PROXY
-DOMAIN-KEYWORD,instagram,PROXY
+USER-AGENT,instagram,PROXY,force-remote-dns
+DOMAIN-KEYWORD,instagram,PROXY,force-remote-dns
 
 # 
-DOMAIN-KEYWORD,google,PROXY
-DOMAIN-KEYWORD,youtube,PROXY
-DOMAIN-KEYWORD,github,PROXY
-DOMAIN-KEYWORD,gitlab,PROXY
+DOMAIN-KEYWORD,google,PROXY,force-remote-dns
+DOMAIN-KEYWORD,youtube,PROXY,force-remote-dns
+DOMAIN-KEYWORD,github,PROXY,force-remote-dns
+DOMAIN-KEYWORD,gitlab,PROXY,force-remote-dns
 DOMAIN-KEYWORD,yahoo,Proxy,force-remote-dns
 DOMAIN-KEYWORD,wikipedia,Proxy,force-remote-dns
 DOMAIN-KEYWORD,telegram,Proxy,force-remote-dns
@@ -182,27 +177,45 @@ DOMAIN-KEYWORD,bloomberg,Proxy,force-remote-dns
 DOMAIN-KEYWORD,stackoverflow,Proxy,force-remote-dns
 DOMAIN-KEYWORD,stackexchange,Proxy,force-remote-dns
 
+DOMAIN-SUFFIX,appsto.re,Proxy
+DOMAIN,s.mzstatic.com,Proxy
+DOMAIN,gspe1-ssl.ls.apple.com,Proxy
+DOMAIN,news-events.apple.com,Proxy
+DOMAIN,news-client.apple.com,Proxy
+
 EOF
 
     local tmpfile=$(mktemp)
     do_work gen_kitsunebi_rule >>${tmpfile}
     cat $tmpfile | grep -v '[=%]' | awk '!(NF && seen[$0]++)' >>$FN
     rm $tmpfile
-    echo "" >>$FN
-    echo "FINAL,DIRECT" >>$FN
+
+    cat >>$FN <<EOF
+
+#GEOIP,cn,DIRECT
+#DOMAIN-KEYWORD,geosite:cn,DIRECT
+#USER-AGENT,wechat,DIRECT
+
+FINAL,DIRECT
+
+EOF
 
     cat >>$FN <<EOF
 
 [DnsServer]
-223.5.5.5
-119.29.29.29
-8.8.8.8,53,REMOTE
-8.8.4.4
+# first one has higher priority
+8.8.8.8,53,force-remote-dns
+223.5.5.5,53,force-domestic-dns
+
+[DnsRule]
+DOMAIN-KEYWORD,google,force-remote-dns
+DOMAIN-KEYWORD,geosite:cn,force-domestic-dns
 
 [DnsHost]
 # Static DNS map that functions in the same way as /etc/hosts.
 localhost=127.0.0.1
 www.localnetwork.uop=127.0.0.1
+abcd.com=1.2.3.4
 
 [DnsClientIp]
 # Client IP for EDNS Client Subnet extension, a single IP address.
