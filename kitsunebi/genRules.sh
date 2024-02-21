@@ -211,81 +211,81 @@ EOF
 # first one has higher priority
 223.6.6.6,53,alidns1
 
-8.8.8.8,53,googledns0
+# 8.8.8.8,53,googledns0
 8.8.4.4,53,googledns1
 
-216.146.35.35,53,Dyn
+# 216.146.35.35,53,Dyn
 # 95.85.95.85,53,gcore
-149.112.112.112,53,quad9_2
-9.9.9.9,53,quad9_0
-9.9.9.10,53,quad9_1
+# 149.112.112.112,53,quad9_2
+# 9.9.9.9,53,quad9_0
+# 9.9.9.10,53,quad9_1
 
-103.247.36.36,53,dnsfilter0
-103.247.37.37,53,dnsfilter1
-208.67.222.222,53,cisco0
-208.67.220.220,53,cisco1
-208.67.222.220,53,cisco2
-195.46.39.39,53,safedns
-185.228.168.9,53,cleanbrowsing
+# 103.247.36.36,53,dnsfilter0
+# 103.247.37.37,53,dnsfilter1
+# 208.67.222.222,53,cisco0
+# 208.67.220.220,53,cisco1
+# 208.67.222.220,53,cisco2
+# 195.46.39.39,53,safedns
+# 185.228.168.9,53,cleanbrowsing
 
-94.140.15.15,53,adguard1
-94.140.14.140,53,adguard2
+# 94.140.15.15,53,adguard1
+# 94.140.14.140,53,adguard2
 
-1.1.1.1,53,cloudfare0
-1.1.1.2,53,cloudfare1
-1.0.0.1,53,cloudfare3
-1.0.0.2,53,cloudfare4
-1.0.0.3,53,cloudfare5
+# 1.1.1.1,53,cloudfare0
+# 1.1.1.2,53,cloudfare1
+# 1.0.0.1,53,cloudfare3
+# 1.0.0.2,53,cloudfare4
+# 1.0.0.3,53,cloudfare5
 
-223.5.5.5,53,alidns0
+# 223.5.5.5,53,alidns0
 # 223.6.6.6,53,alidns1
 
-119.29.29.29,53,dnspod
-114.114.114.114,53,114dns
+# 119.29.29.29,53,dnspod
+# 114.114.114.114,53,114dns
 
 [DnsRule]
-DOMAIN-KEYWORD,tencent,dnspod
-DOMAIN-KEYWORD,huawei,dnspod
-DOMAIN-KEYWORD,aliyun,alidns1
-DOMAIN-KEYWORD,alibaba,alidns1
-DOMAIN-KEYWORD,ugreen,dnspod
-DOMAIN-KEYWORD,ugnas,dnspod
-DOMAIN-KEYWORD,synology,quad9_1
-DOMAIN-KEYWORD,meituan,114dns
-DOMAIN-KEYWORD,geosite:cn,alidns1
+# DOMAIN-KEYWORD,tencent,dnspod
+# DOMAIN-KEYWORD,huawei,dnspod
+# DOMAIN-KEYWORD,aliyun,alidns1
+# DOMAIN-KEYWORD,alibaba,alidns1
+# DOMAIN-KEYWORD,ugreen,dnspod
+# DOMAIN-KEYWORD,ugnas,dnspod
+# DOMAIN-KEYWORD,synology,googledns1
+# DOMAIN-KEYWORD,meituan,114dns
+# DOMAIN-KEYWORD,geosite:cn,alidns1
 
-DOMAIN-KEYWORD,cloudfare,cloudfare1
-DOMAIN-KEYWORD,twitter,quad9_1
+# DOMAIN-KEYWORD,cloudfare,cloudfare1
+DOMAIN-KEYWORD,twitter,googledns1
 DOMAIN-KEYWORD,google,googledns1
 DOMAIN-KEYWORD,youtube,googledns1
 DOMAIN-KEYWORD,gmail,googledns1
-DOMAIN-KEYWORD,telegram,quad9_1
-DOMAIN-KEYWORD,tumblr,quad9_1
-DOMAIN-KEYWORD,facebook,quad9_1
-DOMAIN-KEYWORD,pinterest,quad9_1
-DOMAIN-KEYWORD,instagram,quad9_1
-DOMAIN-KEYWORD,github,quad9_1
-DOMAIN-KEYWORD,gitlab,quad9_1
-DOMAIN-KEYWORD,yahoo,quad9_1
-DOMAIN-KEYWORD,wikipedia,quad9_1
-DOMAIN-KEYWORD,telegram,quad9_1
-DOMAIN-KEYWORD,whatsapp,quad9_1
-DOMAIN-KEYWORD,line,quad9_1
-DOMAIN-KEYWORD,blogspot,quad9_1
-DOMAIN-KEYWORD,shadowsocks,quad9_1
-DOMAIN-KEYWORD,skype,quad9_1
-DOMAIN-KEYWORD,bing,quad9_1
-DOMAIN-KEYWORD,netflix,quad9_1
-DOMAIN-KEYWORD,snapchat,quad9_1
-DOMAIN-KEYWORD,openai,quad9_1
-DOMAIN-KEYWORD,v2ex,quad9_1
-DOMAIN-KEYWORD,dropbox,quad9_1
-DOMAIN-KEYWORD,quora,quad9_1
-DOMAIN-KEYWORD,reddit,quad9_1
-DOMAIN-KEYWORD,wired,quad9_1
-DOMAIN-KEYWORD,bloomberg,quad9_1
-DOMAIN-KEYWORD,stackoverflow,quad9_1
-DOMAIN-KEYWORD,stackexchange,quad9_1
+DOMAIN-KEYWORD,telegram,googledns1
+DOMAIN-KEYWORD,tumblr,googledns1
+DOMAIN-KEYWORD,facebook,googledns1
+DOMAIN-KEYWORD,pinterest,googledns1
+DOMAIN-KEYWORD,instagram,googledns1
+DOMAIN-KEYWORD,github,googledns1
+DOMAIN-KEYWORD,gitlab,googledns1
+DOMAIN-KEYWORD,yahoo,googledns1
+DOMAIN-KEYWORD,wikipedia,googledns1
+DOMAIN-KEYWORD,telegram,googledns1
+DOMAIN-KEYWORD,whatsapp,googledns1
+DOMAIN-KEYWORD,line,googledns1
+DOMAIN-KEYWORD,blogspot,googledns1
+DOMAIN-KEYWORD,shadowsocks,googledns1
+DOMAIN-KEYWORD,skype,googledns1
+DOMAIN-KEYWORD,bing,googledns1
+DOMAIN-KEYWORD,netflix,googledns1
+DOMAIN-KEYWORD,snapchat,googledns1
+DOMAIN-KEYWORD,openai,googledns1
+DOMAIN-KEYWORD,v2ex,googledns1
+DOMAIN-KEYWORD,dropbox,googledns1
+DOMAIN-KEYWORD,quora,googledns1
+DOMAIN-KEYWORD,reddit,googledns1
+DOMAIN-KEYWORD,wired,googledns1
+DOMAIN-KEYWORD,bloomberg,googledns1
+DOMAIN-KEYWORD,stackoverflow,googledns1
+DOMAIN-KEYWORD,stackexchange,googledns1
 
 [DnsHost]
 # Static DNS map that functions in the same way as /etc/hosts.
