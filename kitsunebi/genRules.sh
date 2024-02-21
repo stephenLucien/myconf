@@ -129,8 +129,8 @@ IP-CIDR,149.154.167.0/22,Proxy,no-resolve
 IP-CIDR,149.154.175.0/22,Proxy,no-resolve
 IP-CIDR,91.108.56.0/22,Proxy,no-resolve
 
-//DOMAIN-KEYWORD,geosite:category-ads-all,DIRECT
 USER-AGENT,wechat,DIRECT
+# DOMAIN-KEYWORD,geosite:category-ads-all,REJECT
 
 USER-AGENT,twitter,PROXY,force-remote-dns
 DOMAIN-KEYWORD,twitter,PROXY,force-remote-dns
@@ -186,19 +186,19 @@ DOMAIN,gspe1-ssl.ls.apple.com,Proxy
 DOMAIN,news-events.apple.com,Proxy
 DOMAIN,news-client.apple.com,Proxy
 
-DOMAIN-KEYWORD,geosite:gfw,Proxy,force-remote-dns
+# DOMAIN-KEYWORD,geosite:gfw,Proxy,force-remote-dns
 
 
 EOF
 
     local tmpfile=$(mktemp)
     do_work gen_kitsunebi_rule >>${tmpfile}
-    cat $tmpfile | grep -v '[=%]' | awk '!(NF && seen[$0]++)' >>$FN
+    cat $tmpfile | grep -v '[=%*]' | awk '!(NF && seen[$0]++)' >>$FN
     rm $tmpfile
 
     cat >>$FN <<EOF
 
-DOMAIN-KEYWORD,geosite:cn,DIRECT
+# DOMAIN-KEYWORD,geosite:cn,DIRECT
 
 FINAL,DIRECT
 
@@ -208,29 +208,30 @@ EOF
 
 [DnsServer]
 # first one has higher priority
-1.1.1.1
+1.1.1.1,53,default
 8.8.8.8,53,force-remote-dns
 223.5.5.5,53,force-domestic-dns
 
 [DnsRule]
 DOMAIN-KEYWORD,google,force-remote-dns
-DOMAIN-KEYWORD,geosite:gfw,Proxy,force-remote-dns
+# DOMAIN-KEYWORD,geosite:gfw,Proxy,force-remote-dns
 DOMAIN-KEYWORD,geosite:cn,force-domestic-dns
 DOMAIN-KEYWORD,tencent,force-domestic-dns
 DOMAIN-KEYWORD,huawei,force-domestic-dns
 DOMAIN-KEYWORD,aliyun,force-domestic-dns
 DOMAIN-KEYWORD,alibaba,force-domestic-dns
 DOMAIN-KEYWORD,ugreen,force-domestic-dns
+DOMAIN-KEYWORD,ugnas,force-domestic-dns
 DOMAIN-KEYWORD,synology,force-domestic-dns
-DOMAIN-SUFFIX,oray.com,force-domestic-dns
-DOMAIN-KEYWORD,lenovo.com,force-domestic-dns
+# DOMAIN-SUFFIX,oray.com,force-domestic-dns
+# DOMAIN-SUFFIX,lenovo.com,force-domestic-dns
 
 
 [DnsHost]
 # Static DNS map that functions in the same way as /etc/hosts.
 localhost=127.0.0.1
-www.localnetwork.uop=127.0.0.1
-abcd.com=1.2.3.4
+# www.localnetwork.uop=127.0.0.1
+# abcd.com=1.2.3.4
 
 [DnsClientIp]
 # Client IP for EDNS Client Subnet extension, a single IP address.
