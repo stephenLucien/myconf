@@ -293,9 +293,9 @@ localhost=127.0.0.1
 # www.localnetwork.uop=127.0.0.1
 # abcd.com=1.2.3.4
 
-[DnsClientIp]
+# [DnsClientIp]
 # Client IP for EDNS Client Subnet extension, a single IP address.
-115.239.211.92
+# 115.239.211.92
 
 [RoutingDomainStrategy]
 # https://www.v2ray.com/chapter_02/03_routing.html
