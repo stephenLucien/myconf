@@ -129,7 +129,7 @@ IP-CIDR,149.154.167.0/22,Proxy,no-resolve
 IP-CIDR,149.154.175.0/22,Proxy,no-resolve
 IP-CIDR,91.108.56.0/22,Proxy,no-resolve
 
-DOMAIN-KEYWORD,geosite:category-ads-all,DIRECT
+//DOMAIN-KEYWORD,geosite:category-ads-all,DIRECT
 USER-AGENT,wechat,DIRECT
 
 USER-AGENT,twitter,PROXY,force-remote-dns
@@ -214,6 +214,7 @@ EOF
 
 [DnsRule]
 DOMAIN-KEYWORD,google,force-remote-dns
+DOMAIN-KEYWORD,geosite:gfw,Proxy,force-remote-dns
 DOMAIN-KEYWORD,geosite:cn,force-domestic-dns
 DOMAIN-KEYWORD,tencent,force-domestic-dns
 DOMAIN-KEYWORD,huawei,force-domestic-dns
