@@ -7,8 +7,8 @@ on:
 
 jobs:
   run-script-kitsunebi-genrule:
-    # runs-on: ubuntu-latest
-    runs-on: HOME_VM_UBUNTU
+    runs-on: ubuntu-latest
+    # runs-on: HOME_VM_UBUNTU
     steps:
       - uses: actions/checkout@v2 # Checks out your repository
 
