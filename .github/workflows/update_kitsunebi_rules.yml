@@ -21,7 +21,7 @@ jobs:
         run: |
           cd kitsunebi
           ./genRules.sh update
-          test $? && echo "exit with $?" && exit $?
+          test $? -ne 0 && echo "exit with $?" && exit $?
           ./genRules.sh kitsunebi
           test -z $(git diff kitsunebi_blacklist.conf) && echo "No Update" && exit 0
           git add kitsunebi_blacklist.conf
