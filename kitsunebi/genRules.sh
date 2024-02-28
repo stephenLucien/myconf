@@ -301,7 +301,7 @@ localhost=127.0.0.1
 
 [RoutingDomainStrategy]
 # https://www.v2ray.com/chapter_02/03_routing.html
-IPIfNonMatch
+AsIs
 
 EOF
 
