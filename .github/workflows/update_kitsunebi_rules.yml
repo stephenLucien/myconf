@@ -19,13 +19,31 @@ jobs:
       - name: kitsunebi genrule
         shell: bash
         run: |
+          echo "change directory"
           cd kitsunebi
+          echo "$(pwd)"
+
           ./genRules.sh update
           test $? -ne 0 && echo "exit with $?" && exit $?
+          echo "gfwlist updated!"
+
           ./genRules.sh kitsunebi
           test -z $(git diff kitsunebi_blacklist.conf) && echo "No Update" && exit 0
-          git add kitsunebi_blacklist.conf
-          git add gfwlist.txt
-          git add gfwlist_dec.txt
-          git commit -m "Github Action: update kitsunebi rules at [$(LANG=C date)]" || exit 0
-          git push origin master
+          echo "conf updated!"
+          git status
+
+          #git add kitsunebi_blacklist.conf
+          #git add gfwlist.txt
+          #git add gfwlist_dec.txt
+          #git commit -m "Github Action: update kitsunebi rules at [$(LANG=C date)]" || exit 0
+
+          #git push origin master
+
+      - name: commit changes
+        uses: devops-infra/action-commit-push@master
+        with:
+          github_token: "${{ secrets.GITHUB_TOKEN }}"
+          add_timestamp: true
+          commit_prefix: "[AUTO]"
+          commit_message: "Automatic commit"
+          force: false
