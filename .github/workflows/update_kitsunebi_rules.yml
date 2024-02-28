@@ -10,7 +10,11 @@ jobs:
     runs-on: ubuntu-latest
     # runs-on: HOME_VM_UBUNTU
     steps:
-      - uses: actions/checkout@v2 # Checks out your repository
+      - uses: actions/checkout@v4 # Checks out your repository
+        with:
+            sparse-checkout: |
+              .github
+              kitsunebi
 
       - name: kitsunebi genrule
         shell: bash
