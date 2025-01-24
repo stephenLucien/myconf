@@ -1,9 +1,9 @@
 [AutoProxy 0.2.9]
-! Checksum: poVMIOfIRMPExJOj4BqcrA
+! Checksum: AjaCr145o38h4bVtb3oxAg
 ! Expires: 6h
 ! Title: GFWList4LL
 ! GFWList with EVERYTHING included
-! Last Modified: Tue, 21 Jan 2025 09:48:39 -0500
+! Last Modified: Thu, 23 Jan 2025 23:06:21 -0500
 !
 ! HomePage: https://github.com/gfwlist/gfwlist
 ! License: https://www.gnu.org/licenses/old-licenses/lgpl-2.1.txt
@@ -2535,6 +2535,7 @@ bizhat.com
 .bjs.org
 bjzc.org
 ||bjzc.org
+||blacked.com
 .blacklogic.com
 .blackvpn.com
 ||blackvpn.com
@@ -2544,7 +2545,7 @@ tor.blingblingsquad.net
 ||blinkx.com
 blinw.com
 .blip.tv
-||blip.tv/
+||blip.tv
 ||blockcast.it
 .blockcn.com
 ||blockcn.com
@@ -3516,7 +3517,7 @@ epochtimes.com
 .epochweek.com
 ||epochweek.com
 ||epochweekly.com
-.eporner.com
+||eporner.com
 .equinenow.com
 erabaru.net
 .eracom.com.tw
@@ -3724,7 +3725,7 @@ finler.net
 .firearmsworld.net
 |http://firearmsworld.net
 ||relay.firefox.com
-.fireofliberty.org
+||fireofliberty.info
 ||fireofliberty.org
 .firetweet.io
 ||firetweet.io
@@ -3783,6 +3784,7 @@ video.foxbusiness.com
 ||fooooo.com
 ||foreignaffairs.com
 .fotile.me
+||fountmedia.io
 ||fourthinternational.org
 ||foxdie.us
 ||foxsub.com
@@ -4728,6 +4730,7 @@ huyandex.com
 ||hxwk.org
 hxwq.org
 ||hyperrate.com
+||hypothes.is
 ebook.hyread.com.tw
 ||ebook.hyread.com.tw
 
@@ -5457,7 +5460,7 @@ megavideo.com
 .meltoday.com
 .memehk.com
 ||memehk.com
-memorybbs.com
+||memes.tw
 .memri.org
 .memrijttm.org
 ||mercdn.net
@@ -6126,6 +6129,7 @@ philborges.com
 .picidae.net
 ||img*.picturedip.com
 picturesocial.com
+||pigav.com
 ||pin-cong.com
 .pin6.com
 ||pin6.com
@@ -6323,7 +6327,7 @@ psblog.name
 ||ptt.cc
 ||pttgame.com
 .puffstore.com
-.puuko.com
+||main-ecnpaper-economist.content.pugpig.com
 ||pullfolio.com
 .punyu.com/puny
 ||pureconcepts.net
@@ -6620,14 +6624,14 @@ securityinabox.org
 .securitykiss.com
 ||securitykiss.com
 ||seed4.me
-news.seehua.com
+||news.seehua.com
 seesmic.com
 ||seevpn.com
 ||seezone.net
+||sehuatang.net
 sejie.com
 .sendspace.com
 ||sensortower.com
-|http://tweets.seraph.me/
 sesawe.net
 ||sesawe.net
 .sesawe.org
@@ -6781,7 +6785,6 @@ sis001.us
 ||sitemaps.org
 .sjrt.org
 |http://sjrt.org
-||sjum.cn
 ||sketchappsources.com
 ||skimtube.com
 ||lab.skk.moe
@@ -7384,6 +7387,7 @@ top81.ws
 .topnews.in
 .toppornsites.com
 |http://toppornsites.com
+||toptoon.net
 .torguard.net
 ||torguard.net
 ||top.tv
@@ -7795,7 +7799,7 @@ uygur.org
 .vanemu.cn
 .vanilla-jp.com
 .vanpeople.com
-vansky.com
+||vansky.com
 ||vaticannews.va
 ||vcf-online.org
 ||vcfbuilder.org
