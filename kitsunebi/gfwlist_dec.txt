@@ -1,9 +1,9 @@
 [AutoProxy 0.2.9]
-! Checksum: jImfSEYED/1DliDz1Am9iQ
+! Checksum: Y78Bi/tfxqchgnpcMtaRyQ
 ! Expires: 6h
 ! Title: GFWList4LL
 ! GFWList with EVERYTHING included
-! Last Modified: Wed, 28 Jan 2026 03:16:39 +0000
+! Last Modified: Fri, 30 Jan 2026 01:56:11 +0000
 !
 ! HomePage: https://github.com/gfwlist/gfwlist
 ! License: https://www.gnu.org/licenses/old-licenses/lgpl-2.1.txt
@@ -253,6 +253,7 @@
 !--@@||intl.target.com
 ||rcam.target.com
 ||technews.tw
+||freeterabox.com
 ||terabox.com
 ||thinkgeek.com
 ||thebodyshop-usa.com
@@ -5670,6 +5671,7 @@ rutube.ru
 .rxhj.net
 |http://rxhj.net
 !--------------------SS-------------------------
+||simianx.ai
 ||steamladder.com
 ||sora.com
 ||lt.sntp.uk
