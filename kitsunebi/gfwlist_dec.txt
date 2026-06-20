@@ -1,9 +1,9 @@
 [AutoProxy 0.2.9]
-! Checksum: E89mHym5V4Um+2VKUfGOYg
+! Checksum: BJRA81jkTWpISrDQm8XlLA
 ! Expires: 6h
 ! Title: GFWList4LL
 ! GFWList with EVERYTHING included
-! Last Modified: Fri, 19 Jun 2026 04:15:23 +0000
+! Last Modified: Fri, 19 Jun 2026 14:36:45 +0000
 !
 ! HomePage: https://github.com/gfwlist/gfwlist
 ! License: https://www.gnu.org/licenses/old-licenses/lgpl-2.1.txt
@@ -1197,6 +1197,7 @@ iipdigital.usembassy.gov
 ||yahoo.com.hk
 ||yahoo.com
 !------------------Numerics---------------------
+||18mh.net
 ||24hbook.com
 ||996.icu
 ||ipfs.4everland.io
@@ -1442,6 +1443,7 @@ iipdigital.usembassy.gov
 !--boxun.azurewebsites.net doesn't exist.
 ||boxun*.azurewebsites.net
 !--------------------BB-------------------------
+||bilinovel.com
 ||boomplay.com
 ||bleepingcomputer.com
 ||bellingcat.com
